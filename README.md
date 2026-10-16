@@ -1,7 +1,6 @@
 <div align="center">
 
-<h1>SCALE</h1>
-<h3>Improving Guidance-Free Visual Generation via<br>Self-Contrastive Alignment for Likelihood Estimation</h3>
+<h1>SCALE: Improving Guidance-Free Visual Generation via Self-Contrastive Alignment for Likelihood Estimation</h1>
 
 <p><strong>NeurIPS 2026</strong></p>
 
