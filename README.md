@@ -6,7 +6,7 @@
 <p><strong>NeurIPS 2026</strong></p>
 
 <p>
-  <strong>Jiwan Hur &nbsp;·&nbsp; Dong-Jae Lee &nbsp;·&nbsp; Dongyeun Lee &nbsp;·&nbsp; Gyojin Han &nbsp;·&nbsp; Junmo Kim</strong><br>
+  <strong>Jiwan&nbsp;Hur &nbsp;·&nbsp; Dong-Jae&nbsp;Lee &nbsp;·&nbsp; Dongyeun&nbsp;Lee &nbsp;·&nbsp; Gyojin&nbsp;Han &nbsp;·&nbsp; Junmo&nbsp;Kim</strong><br>
   KAIST, South Korea
 </p>
 
