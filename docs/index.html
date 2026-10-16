@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#3156d8">
-  <title>SCALE · NeurIPS 2026</title>
+  <meta name="theme-color" content="#ffffff">
+  <title>SCALE: Improving Guidance-Free Visual Generation via Self-Contrastive Alignment for Likelihood Estimation</title>
   <meta name="description" content="SCALE: Improving Guidance-Free Visual Generation via Self-Contrastive Alignment for Likelihood Estimation. NeurIPS 2026. Official project page; code coming soon.">
   <link rel="canonical" href="https://jiwanhur.github.io/SCALE/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="SCALE · Better visual generation without sampling-time guidance">
-  <meta property="og:description" content="Self-Contrastive Alignment for Likelihood Estimation. Accepted to NeurIPS 2026. Code coming soon.">
+  <meta property="og:title" content="SCALE: Improving Guidance-Free Visual Generation via Self-Contrastive Alignment for Likelihood Estimation">
+  <meta property="og:description" content="Self-Contrastive Alignment for Likelihood Estimation. NeurIPS 2026. Code coming soon.">
   <meta property="og:url" content="https://jiwanhur.github.io/SCALE/">
   <meta property="og:image" content="https://jiwanhur.github.io/SCALE/assets/images/comparison.webp">
   <meta property="og:image:alt" content="Guidance-free image generation results comparing SD1.5, GFT, and SCALE, with and without DPO.">
@@ -20,70 +20,127 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <nav class="nav wrap" aria-label="Main navigation">
-      <a class="brand" href="#top" aria-label="SCALE home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 2h9v9H2zM13 2h9v9h-9zM2 13h9v9H2z" fill="currentColor"/><path d="M13 13h9v9h-9z" fill="currentColor" opacity=".35"/></svg>SCALE</a>
-      <div class="nav-links"><a href="#method">Method</a><a href="#results">Results</a><a href="#citation">Citation</a><a class="nav-github" href="https://github.com/JiwanHur/SCALE">GitHub <span aria-hidden="true">↗</span></a></div>
-    </nav>
-  </header>
-
   <main id="main">
-    <section class="hero wrap" id="top" aria-labelledby="paper-title">
-      <p class="venue"><span class="venue-dot" aria-hidden="true"></span>Accepted to NeurIPS 2026</p>
-      <h1 id="paper-title"><span class="hero-wordmark">SCALE</span><span class="paper-title">Improving Guidance-Free Visual Generation via<br class="desktop-break"> Self-Contrastive Alignment for Likelihood Estimation</span></h1>
-      <ul class="authors" aria-label="Authors"><li>Jiwan Hur</li><li>Dong-Jae Lee</li><li>Dongyeun Lee</li><li>Gyojin Han</li><li>Junmo Kim</li></ul>
+    <header class="publication-header wrap" id="top">
+      <h1>SCALE: Improving Guidance-Free Visual Generation via Self-Contrastive Alignment for Likelihood Estimation</h1>
+      <ul class="authors" aria-label="Authors">
+        <li>Jiwan Hur</li><li>Dong-Jae Lee</li><li>Dongyeun Lee</li><li>Gyojin Han</li><li>Junmo Kim</li>
+      </ul>
       <p class="affiliation">KAIST, South Korea</p>
-      <div class="hero-actions">
-        <a class="button button-primary" href="assets/paper.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v6h5M8 13h8M8 17h6"/></svg>Read the paper</a>
-        <a class="button button-secondary" href="https://github.com/JiwanHur/SCALE"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.54v-2.07c-3.09.67-3.74-1.31-3.74-1.31-.5-1.29-1.24-1.63-1.24-1.63-1.02-.7.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 1.71 2.6 1.22 3.24.93.1-.72.39-1.22.71-1.5-2.47-.28-5.06-1.24-5.06-5.49 0-1.22.43-2.22 1.14-3-.12-.28-.49-1.42.11-2.96 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.12-1.44 3.05-1.14 3.05-1.14.61 1.54.23 2.68.12 2.96.71.78 1.14 1.78 1.14 3.01 0 4.26-2.6 5.2-5.08 5.48.4.35.75 1.02.75 2.06v3.05c0 .3.2.65.76.54A11.1 11.1 0 0 0 12 .9Z"/></svg>GitHub <span class="button-note">Code soon</span></a>
+      <p class="venue">NeurIPS 2026</p>
+      <div class="publication-links">
+        <a class="button" href="assets/paper.pdf">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v6h5M8 13h8M8 17h6"/></svg>
+          Paper
+        </a>
+        <a class="button" href="https://github.com/JiwanHur/SCALE">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.54v-2.07c-3.09.67-3.74-1.31-3.74-1.31-.5-1.29-1.24-1.63-1.24-1.63-1.02-.7.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 1.71 2.6 1.22 3.24.93.1-.72.39-1.22.71-1.5-2.47-.28-5.06-1.24-5.06-5.49 0-1.22.43-2.22 1.14-3-.12-.28-.49-1.42.11-2.96 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.12-1.44 3.05-1.14 3.05-1.14.61 1.54.23 2.68.12 2.96.71.78 1.14 1.78 1.14 3.01 0 4.26-2.6 5.2-5.08 5.48.4.35.75 1.02.75 2.06v3.05c0 .3.2.65.76.54A11.1 11.1 0 0 0 12 .9Z"/></svg>
+          Code <span class="button-note">(coming soon)</span>
+        </a>
       </div>
-      <p class="hero-summary">Better visual generation <strong>without sampling-time guidance.</strong><br> SCALE learns from the contrast between real and self-generated samples.</p>
-    </section>
+      <p class="tldr"><strong>TL;DR:</strong> SCALE learns from the contrast between real and self-generated samples to improve visual generation with <strong>one model evaluation per sampling step.</strong></p>
+    </header>
 
     <section class="showcase wrap" aria-labelledby="showcase-title">
-      <div class="section-topline"><h2 id="showcase-title">See the self-contrastive signal at work.</h2><span class="eyebrow">Text-to-image · SD1.5</span></div>
+      <h2 id="showcase-title">Guidance-Free Text-to-Image Generation</h2>
+      <p class="section-intro">Compare SD1.5, GFT, and SCALE on the same prompts, with or without DPO.</p>
       <div class="comparison-controls" hidden>
-        <div class="example-picker" role="group" aria-label="Choose a generation example"><button type="button" data-example="fireworks" aria-pressed="true">Fireworks</button><button type="button" data-example="portrait" aria-pressed="false">Portrait</button></div>
+        <div class="sample-navigation" role="group" aria-label="Browse generation examples">
+          <button type="button" id="previous-example" aria-label="Previous example"><span aria-hidden="true">←</span></button>
+          <span id="example-position">1 / 9</span>
+          <button type="button" id="next-example" aria-label="Next example"><span aria-hidden="true">→</span></button>
+        </div>
         <label class="dpo-control"><input id="dpo-toggle" type="checkbox" role="switch"><span class="switch-track" aria-hidden="true"></span><span>With DPO</span></label>
       </div>
       <div class="comparison-grid" aria-label="Guidance-free generation comparison">
-        <figure class="sample"><figcaption><span data-model-label="sd15">SD1.5</span><span class="sample-kind">Base model</span></figcaption><a class="zoomable" href="assets/images/fireworks-sd15.webp" data-caption="SD1.5: a crowd of people watching fireworks"><img id="sample-sd15" src="assets/images/fireworks-sd15.webp" width="512" height="512" fetchpriority="high" alt="SD1.5 generation of a crowd watching fireworks."></a></figure>
-        <figure class="sample"><figcaption><span data-model-label="gft">GFT</span><span class="sample-kind">Guidance-free baseline</span></figcaption><a class="zoomable" href="assets/images/fireworks-gft.webp" data-caption="GFT: a crowd of people watching fireworks"><img id="sample-gft" src="assets/images/fireworks-gft.webp" width="512" height="512" alt="GFT generation of a crowd watching fireworks."></a></figure>
-        <figure class="sample sample-ours"><figcaption><span data-model-label="scale">SCALE</span><span class="sample-kind">Ours</span></figcaption><a class="zoomable" href="assets/images/fireworks-scale.webp" data-caption="SCALE: a crowd of people watching fireworks"><img id="sample-scale" src="assets/images/fireworks-scale.webp" width="512" height="512" alt="SCALE generation of a crowd watching fireworks."></a></figure>
+        <figure class="sample">
+          <figcaption><span data-model-label="sd15">SD1.5</span></figcaption>
+          <a class="zoomable" href="assets/images/fireworks-sd15.webp" data-caption="SD1.5: a crowd of people watching fireworks"><img id="sample-sd15" src="assets/images/fireworks-sd15.webp" width="512" height="512" fetchpriority="high" alt="SD1.5: a crowd of people watching fireworks"></a>
+        </figure>
+        <figure class="sample">
+          <figcaption><span data-model-label="gft">GFT</span></figcaption>
+          <a class="zoomable" href="assets/images/fireworks-gft.webp" data-caption="GFT: a crowd of people watching fireworks"><img id="sample-gft" src="assets/images/fireworks-gft.webp" width="512" height="512" alt="GFT: a crowd of people watching fireworks"></a>
+        </figure>
+        <figure class="sample sample-ours">
+          <figcaption><span data-model-label="scale">SCALE</span> <small>(ours)</small></figcaption>
+          <a class="zoomable" href="assets/images/fireworks-scale.webp" data-caption="SCALE: a crowd of people watching fireworks"><img id="sample-scale" src="assets/images/fireworks-scale.webp" width="512" height="512" alt="SCALE: a crowd of people watching fireworks"></a>
+        </figure>
       </div>
-      <p class="prompt" aria-live="polite"><span>Prompt</span><span id="prompt-text">“a crowd of people watching fireworks”</span></p>
-      <p class="figure-note">Examples from the paper at 512 × 512. All methods shown use guidance-free sampling. <a href="assets/images/comparison.webp" class="zoomable" data-caption="Full comparison from the paper: SD1.5, GFT, and SCALE, with and without DPO.">View the full comparison <span aria-hidden="true">↗</span></a></p>
+      <p class="prompt" aria-live="polite"><strong>Prompt:</strong> <span id="prompt-text">“a crowd of people watching fireworks”</span></p>
+      <div class="example-picker" role="group" aria-label="Choose a generation example" hidden>
+        <button type="button" data-example="fireworks" aria-pressed="true"><img src="assets/images/fireworks-scale.webp" width="64" height="64" alt="" loading="lazy"><span>Fireworks</span></button>
+        <button type="button" data-example="portrait" aria-pressed="false"><img src="assets/images/portrait-scale.webp" width="64" height="64" alt="" loading="lazy"><span>Portrait</span></button>
+        <button type="button" data-example="green-hair" aria-pressed="false"><img src="assets/images/green-hair-scale.webp" width="64" height="64" alt="" loading="lazy"><span>Green hair</span></button>
+        <button type="button" data-example="painting" aria-pressed="false"><img src="assets/images/painting-scale.webp" width="64" height="64" alt="" loading="lazy"><span>Painting</span></button>
+        <button type="button" data-example="squirrel" aria-pressed="false"><img src="assets/images/squirrel-scale.webp" width="64" height="64" alt="" loading="lazy"><span>Squirrel</span></button>
+        <button type="button" data-example="raccoon" aria-pressed="false"><img src="assets/images/raccoon-scale.webp" width="64" height="64" alt="" loading="lazy"><span>Raccoon</span></button>
+        <button type="button" data-example="shoes" aria-pressed="false"><img src="assets/images/shoes-scale.webp" width="64" height="64" alt="" loading="lazy"><span>Shoes</span></button>
+        <button type="button" data-example="tower" aria-pressed="false"><img src="assets/images/tower-scale.webp" width="64" height="64" alt="" loading="lazy"><span>Tower</span></button>
+        <button type="button" data-example="cottage" aria-pressed="false"><img src="assets/images/cottage-scale.webp" width="64" height="64" alt="" loading="lazy"><span>Cottage</span></button>
+      </div>
+      <p class="figure-note">Nine examples from Figures 5 and 11, at 512 × 512. All methods use guidance-free sampling. Click an image to enlarge.</p>
+      <p class="figure-links"><a href="assets/images/comparison.webp" class="zoomable" data-caption="Figure 5. SD1.5, GFT, and SCALE, with and without DPO.">Full Figure 5</a><span aria-hidden="true">·</span><a href="assets/images/comparison-supp.webp" class="zoomable" data-caption="Figure 11. Seven additional prompts comparing SD1.5, GFT, and SCALE, with and without DPO.">Full Figure 11</a></p>
     </section>
 
-    <section class="overview section wrap" aria-labelledby="overview-title">
-      <div class="section-heading"><p class="eyebrow">The idea</p><h2 id="overview-title">Learn the guidance<br>during training.</h2></div>
-      <div class="overview-copy"><p>Classifier-free guidance improves generation quality, but requires additional model evaluations at sampling time. Existing guidance-free methods learn to approximate that signal.</p><p>We introduce <strong>self-contrastive guidance (SCG)</strong>: contrast the model’s predictions on real and self-generated samples to obtain a signal of its own prediction errors. SCALE incorporates this signal into the likelihood training objective, so the model produces enhanced predictions with <strong>one model evaluation per sampling step.</strong></p><p>The same framework applies to diffusion and autoregressive models, and complements classifier-free guidance and preference-based fine-tuning.</p></div>
-    </section>
-
-    <section class="method-section" id="method" aria-labelledby="method-title">
-      <div class="wrap section">
-        <div class="section-heading"><p class="eyebrow">How SCALE works</p><h2 id="method-title">A contrast at training time.<br>A single prediction at sampling time.</h2></div>
-        <figure class="method-figure"><a class="zoomable" href="assets/images/method.webp" data-caption="SCALE training and sampling. The self-generated reference provides a contrast during training; sampling uses one model evaluation per step."><img src="assets/images/method.webp" width="2800" height="500" loading="lazy" alt="SCALE training combines predictions on real and self-generated samples. At sampling time, one network produces the enhanced prediction, with alpha controlling implicit guidance strength."></a><figcaption>Training learns the self-contrastive prediction directly. Sampling needs no additional guidance branch.</figcaption></figure>
-        <ol class="method-steps"><li><span class="step-number">01</span><h3>Generate a reference</h3><p>Use the model’s own prediction to construct a self-generated sample paired with a real training sample.</p></li><li><span class="step-number">02</span><h3>Learn from the contrast</h3><p>Reparameterize the likelihood objective to absorb the difference between real and reference predictions into the model.</p></li><li><span class="step-number">03</span><h3>Sample without guidance</h3><p>Use a single model evaluation per step, with the learned conditioning parameter controlling the implicit guidance strength.</p></li></ol>
-        <aside class="patchmix-note"><span class="patchmix-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><div><h3>PatchMix keeps the reference closer to the data.</h3><p>Mixing patches from real and self-generated samples provides a more reliable guidance anchor when generated samples are degraded. We use a mixing ratio of λ = 0.2 across our experiments.</p></div></aside>
+    <section class="section wrap" id="abstract" aria-labelledby="abstract-title">
+      <h2 id="abstract-title">Abstract</h2>
+      <div class="prose abstract-copy">
+        <p>Classifier-free guidance (CFG) is essential for improving sample quality in visual generation, but it incurs substantial sampling overhead. Existing guidance-free approaches halve this cost by approximating the CFG with a single model inference, but their performance is bounded by the CFG and inherits its limitations. In this paper, we propose <em>self-contrastive guidance</em> (SCG), which contrasts the model’s prediction on real and self-generated samples to obtain a direct, model-based signal that pushes generation toward the true data manifold. Integrating SCG into the standard likelihood objective via reparameterization yields <em>Self-Contrastive Alignment for Likelihood Estimation</em> (SCALE), a guidance-free training framework that produces SCG-enhanced predictions in a single forward pass. Across class-conditional and text-to-image generation on diffusion and autoregressive models, SCALE consistently outperforms CFG-mimicking guidance-free baselines and improves further when combined with DPO, demonstrating that the self-contrastive signal yields gains complementary to both CFG and preference-based fine-tuning.</p>
       </div>
     </section>
 
-    <section class="section results-section wrap" id="results" aria-labelledby="results-title">
-      <div class="section-heading"><p class="eyebrow">Selected results</p><h2 id="results-title">One framework.<br>Diffusion and autoregressive generation.</h2><p>Guidance-free class-conditional generation on ImageNet 256 × 256.<br>FID-50k ↓ measures sample quality; lower is better.</p></div>
-      <div class="result-highlights"><div><p class="result-model">DiT-XL/2 <span>Diffusion</span></p><p class="result-value">1.87 <span>FID</span></p><p class="result-context">vs. 1.99 with GFT</p></div><div><p class="result-model">LlamaGen-L <span>Autoregressive</span></p><p class="result-value">2.58 <span>FID</span></p><p class="result-context">vs. 2.88 with GFT</p></div><div class="efficiency-result"><p class="result-model">Sampling</p><p class="result-value">1 <span>evaluation / step</span></p><p class="result-context">No additional guidance branch</p></div></div>
-      <div class="results-table"><table><caption>Selected guidance-free baselines from Table 1 of the paper.</caption><thead><tr><th scope="col">Model</th><th scope="col">Base</th><th scope="col">GFT</th><th scope="col" class="ours-cell">SCALE</th></tr></thead><tbody><tr><th scope="row">DiT-XL/2</th><td>9.62</td><td>1.99</td><td class="ours-cell"><strong>1.87</strong></td></tr><tr><th scope="row">LlamaGen-L</th><td>19.0</td><td>2.88</td><td class="ours-cell"><strong>2.58</strong></td></tr></tbody></table></div>
-      <div class="gallery-heading"><h3>Controllable generation across model families</h3><p>Each grid varies the implicit SCG strength (α, horizontally) and CFG strength (β, vertically). Select a figure to enlarge.</p></div>
-      <div class="model-gallery"><figure><a class="zoomable" href="assets/images/dit.webp" data-caption="DiT-XL/2 samples. Alpha decreases from left to right; beta decreases from top to bottom within each class grid."><img src="assets/images/dit.webp" width="2200" height="1554" loading="lazy" alt="DiT-XL/2 generations of dogs, cars, cockatoos, red pandas, frogs, and buses across alpha and beta settings."></a><figcaption><strong>DiT-XL/2</strong><span>Diffusion model</span></figcaption></figure><figure><a class="zoomable" href="assets/images/llamagen.webp" data-caption="LlamaGen-L samples. Alpha decreases from left to right; beta decreases from top to bottom within each class grid."><img src="assets/images/llamagen.webp" width="2200" height="1554" loading="lazy" alt="LlamaGen-L generations of koalas, parrots, pandas, burgers, volcanoes, and flamingos across alpha and beta settings."></a><figcaption><strong>LlamaGen-L</strong><span>Autoregressive model</span></figcaption></figure></div>
-      <div class="dpo-note"><h3>Complementary to preference fine-tuning</h3><p>SCALE also improves text-to-image generation with Stable Diffusion v1.5 and benefits further from DiffusionDPO. Explore the “With DPO” comparison above, or see the paper for the full metrics and human preference study.</p></div>
-      <a class="text-link" href="assets/paper.pdf">Read the complete experiments <span aria-hidden="true">↗</span></a>
+    <section class="section wrap" id="method" aria-labelledby="method-title">
+      <h2 id="method-title">Method</h2>
+      <p class="section-intro">SCALE incorporates self-contrastive guidance into likelihood training.</p>
+      <figure class="method-figure">
+        <a class="zoomable" href="assets/images/method.webp" data-caption="SCALE training and sampling. The self-generated reference provides a contrast during training; sampling uses one model evaluation per step."><img src="assets/images/method.webp" width="2800" height="500" loading="lazy" alt="SCALE training combines predictions on real and self-generated samples. At sampling time, one network produces the enhanced prediction, with alpha controlling implicit guidance strength."></a>
+        <figcaption>Training learns the self-contrastive prediction directly. Sampling needs no additional guidance branch.</figcaption>
+      </figure>
+      <div class="prose method-copy">
+        <p><strong>Self-contrastive guidance.</strong> The model constructs a self-generated sample paired with a real training sample. Contrasting its predictions on the two inputs provides a signal of its own prediction errors.</p>
+        <p><strong>Guidance-free training and sampling.</strong> SCALE reparameterizes the likelihood objective to absorb this contrast into the model. At sampling time, a single model evaluation per step produces the enhanced prediction, with a conditioning parameter controlling the implicit guidance strength.</p>
+        <p><strong>PatchMix.</strong> Mixing patches from real and self-generated samples provides a more reliable guidance anchor when generated samples are degraded. We use a mixing ratio of λ = 0.2 across our experiments.</p>
+      </div>
     </section>
 
-    <section class="release-section" aria-labelledby="release-title"><div class="wrap release-inner"><div><p class="eyebrow">NeurIPS 2026</p><h2 id="release-title">Code coming soon.</h2><p>The official implementation will be released in the SCALE repository.</p></div><a class="button button-primary" href="https://github.com/JiwanHur/SCALE">View the repository <span aria-hidden="true">↗</span></a></div></section>
+    <section class="section results-section" id="results" aria-labelledby="results-title">
+      <div class="wrap">
+        <h2 id="results-title">Results</h2>
+        <div class="prose">
+          <h3>Class-Conditional Generation</h3>
+          <p>SCALE improves guidance-free generation across diffusion and autoregressive models. On ImageNet 256 × 256, SCALE achieves FID-50k scores of <strong>1.87 with DiT-XL/2</strong> and <strong>2.58 with LlamaGen-L</strong>.</p>
+          <div class="results-table">
+            <table>
+              <caption>Guidance-free generation on ImageNet 256 × 256 (Table 1). FID-50k ↓; lower is better.</caption>
+              <thead><tr><th scope="col">Model</th><th scope="col">Base</th><th scope="col">GFT</th><th scope="col">SCALE</th></tr></thead>
+              <tbody><tr><th scope="row">DiT-XL/2</th><td>9.62</td><td>1.99</td><td><strong>1.87</strong></td></tr><tr><th scope="row">LlamaGen-L</th><td>19.0</td><td>2.88</td><td><strong>2.58</strong></td></tr></tbody>
+            </table>
+          </div>
+          <h3>Controllable Generation</h3>
+          <p>Each grid below varies the implicit SCG strength (α, horizontally) and CFG strength (β, vertically). Click a figure to enlarge.</p>
+        </div>
+        <div class="model-gallery">
+          <figure><a class="zoomable" href="assets/images/dit.webp" data-caption="DiT-XL/2 samples. Alpha decreases from left to right; beta decreases from top to bottom within each class grid."><img src="assets/images/dit.webp" width="2200" height="1554" loading="lazy" alt="DiT-XL/2 generations of dogs, cars, cockatoos, red pandas, frogs, and buses across alpha and beta settings."></a><figcaption><strong>DiT-XL/2</strong> · Diffusion model</figcaption></figure>
+          <figure><a class="zoomable" href="assets/images/llamagen.webp" data-caption="LlamaGen-L samples. Alpha decreases from left to right; beta decreases from top to bottom within each class grid."><img src="assets/images/llamagen.webp" width="2200" height="1554" loading="lazy" alt="LlamaGen-L generations of koalas, parrots, pandas, burgers, volcanoes, and flamingos across alpha and beta settings."></a><figcaption><strong>LlamaGen-L</strong> · Autoregressive model</figcaption></figure>
+        </div>
+        <div class="prose">
+          <h3>Complementary to Preference Fine-Tuning</h3>
+          <p>SCALE also improves text-to-image generation with Stable Diffusion v1.5 and benefits further from DiffusionDPO. Explore the “With DPO” comparison above, or see the <a href="assets/paper.pdf">paper</a> for the full metrics and human preference study.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap news-section" aria-labelledby="news-title">
+      <h2 id="news-title">News</h2>
+      <ul class="news-list prose">
+        <li><time datetime="2026-10">[2026/10]</time> Our paper has been accepted to <strong>NeurIPS 2026!</strong></li>
+        <li><time datetime="2026-10">[2026/10]</time> The project page and paper are available. Training and sampling code will be released soon in our <a href="https://github.com/JiwanHur/SCALE">GitHub repository</a>.</li>
+      </ul>
+    </section>
 
     <section class="section citation-section wrap" id="citation" aria-labelledby="citation-title">
-      <div class="citation-heading"><div><p class="eyebrow">Reference</p><h2 id="citation-title">Citation</h2></div><button class="button button-secondary copy-button" type="button" id="copy-citation" hidden>Copy BibTeX</button></div>
-      <pre><code id="bibtex">@inproceedings{hur2026scale,
+      <div class="citation-heading"><h2 id="citation-title">BibTeX</h2><button class="copy-button" type="button" id="copy-citation" hidden>Copy BibTeX</button></div>
+      <pre tabindex="0"><code id="bibtex">@inproceedings{hur2026scale,
   title     = {Improving Guidance-Free Visual Generation via
                Self-Contrastive Alignment for Likelihood Estimation},
   author    = {Hur, Jiwan and Lee, Dong-Jae and Lee, Dongyeun
@@ -96,7 +153,7 @@
     </section>
   </main>
 
-  <footer class="footer wrap"><a class="brand" href="#top">SCALE<span class="footer-year">2026</span></a><p>Jiwan Hur · Dong-Jae Lee · Dongyeun Lee · Gyojin Han · Junmo Kim<br>KAIST, South Korea</p><a href="https://github.com/JiwanHur/SCALE">GitHub <span aria-hidden="true">↗</span></a></footer>
+  <footer class="footer"><p>SCALE · NeurIPS 2026 · KAIST</p><p><a href="assets/paper.pdf">Paper</a><span aria-hidden="true"> · </span><a href="https://github.com/JiwanHur/SCALE">GitHub</a></p></footer>
   <dialog id="figure-dialog" aria-labelledby="dialog-caption"><form method="dialog"><button class="dialog-close" aria-label="Close figure">Close <span aria-hidden="true">×</span></button></form><img id="dialog-image" alt=""><p id="dialog-caption"></p></dialog>
 </body>
 </html>
