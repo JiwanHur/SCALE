@@ -1,13 +1,22 @@
-# SCALE · NeurIPS 2026
+<div align="center">
 
-**Improving Guidance-Free Visual Generation via Self-Contrastive Alignment for Likelihood Estimation**
+<h1>SCALE</h1>
+<h3>Improving Guidance-Free Visual Generation via<br>Self-Contrastive Alignment for Likelihood Estimation</h3>
 
-Jiwan Hur · Dong-Jae Lee · Dongyeun Lee · Gyojin Han · Junmo Kim  
-KAIST, South Korea
+<p><strong>NeurIPS 2026</strong></p>
 
-**Our paper has been accepted to NeurIPS 2026. Code coming soon!**
+<p>
+  <strong>Jiwan Hur &nbsp;·&nbsp; Dong-Jae Lee &nbsp;·&nbsp; Dongyeun Lee &nbsp;·&nbsp; Gyojin Han &nbsp;·&nbsp; Junmo Kim</strong><br>
+  KAIST, South Korea
+</p>
 
-[Project page](https://jiwanhur.github.io/SCALE/) · [Paper](docs/assets/paper.pdf)
+[![Project Page](https://img.shields.io/badge/Project_Page-3156d8?style=for-the-badge&logo=github&logoColor=white)](https://jiwanhur.github.io/SCALE/)
+[![Paper PDF](https://img.shields.io/badge/Paper-PDF-b31b1b?style=for-the-badge)](docs/assets/paper.pdf)
+[![Code coming soon](https://img.shields.io/badge/Code-Coming_Soon-64748b?style=for-the-badge&logo=github&logoColor=white)](#code-release)
+
+</div>
+
+> 🎉 **Our paper has been accepted to NeurIPS 2026!** Code will be released soon.
 
 SCALE learns from the contrast between the model's predictions on real and self-generated samples. It incorporates this self-contrastive signal into likelihood training, improving visual generation with one model evaluation per sampling step and no additional sampling-time guidance branch. The framework applies to diffusion and autoregressive models and complements preference-based fine-tuning.
 
@@ -41,33 +50,3 @@ The official implementation will be released in this repository. Training code, 
   url       = {https://jiwanhur.github.io/SCALE/}
 }
 ```
-
-## Project page maintenance
-
-The website is a static page in `docs/`; no build step or package installation is required.
-
-```bash
-python3 -m http.server 8000 --directory docs
-```
-
-Open `http://localhost:8000`. The same files also work under the GitHub Pages `/SCALE/` path.
-
-For GitHub Pages, select **Settings → Pages → Deploy from a branch → main → /docs**. The expected URL is `https://jiwanhur.github.io/SCALE/`.
-
-Alternatively, log in to the **official GitHub CLI** as `JiwanHur`, then run:
-
-```bash
-gh auth login --hostname github.com --git-protocol https --web
-python3 scripts/publish.py
-```
-
-The helper creates the public repository if needed, commits the website files, pushes `main`, and configures Pages to serve `docs/`. It does not force-push or change global Git settings. If the official CLI has a different executable path, set `SCALE_GH_BIN` to that path when running the helper.
-
-- `docs/index.html`: paper details, method, results, and citation.
-- `docs/style.css`: responsive layout and styling.
-- `docs/script.js`: example/DPO comparison, figure enlargement, and citation copying.
-- `docs/assets/paper.pdf`: downloadable manuscript; replace when the final PDF is ready.
-- `ASSETS.md`: figure sources and extraction notes.
-- `scripts/publish.py`: GitHub repository and Pages setup after account authentication.
-
-When code is released, update the announcement in both this README and `docs/index.html`.
