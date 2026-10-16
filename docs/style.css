@@ -97,11 +97,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, pre:focus-visible { 
 .model-gallery img { width: 100%; background: #fff; }
 .model-gallery figcaption { text-align: center; margin-top: 12px; font-size: 14px; color: var(--muted); }
 .model-gallery figcaption strong { color: var(--ink); }
-.pareto-figure { max-width: 440px; margin: 26px auto 28px; }
-.pareto-figure img { width: 100%; }
+.t2i-results { max-width: none; }
+.t2i-results > h3, .t2i-results > p { max-width: 800px; margin-inline: auto; }
+.quantitative-scroll { margin-top: 26px; overflow-x: auto; padding-bottom: 8px; scrollbar-width: thin; }
+.quantitative-scroll:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }
+.quantitative-figures { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.15fr); gap: 24px; min-width: 700px; }
+.quantitative-figures img { width: 100%; }
 .t2i-results figcaption { margin-top: 14px; color: var(--muted); font-size: 14px; text-align: center; }
-.dpo-figure { margin-top: 26px; }
-.dpo-figure img { width: 100%; }
 .news-section { padding-bottom: 24px; }
 .news-list { padding-left: 21px; }
 .news-list li + li { margin-top: 10px; }
@@ -173,7 +175,6 @@ dialog p { font-size: 13px; text-align: center; color: var(--muted); margin-top:
   .results-table caption { font-size: 12px; }
   .model-gallery { grid-template-columns: 1fr; gap: 24px; }
   .model-gallery figcaption { font-size: 13px; margin-top: 10px; }
-  .pareto-figure { margin-block: 24px; }
   .t2i-results figcaption { font-size: 12px; }
   .news-section { padding-bottom: 20px; }
   .citation-section { padding-top: 24px; padding-bottom: 24px; }
