@@ -77,9 +77,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, pre:focus-visible { 
 .example-picker button img { width: 64px; height: 64px; object-fit: cover; border-radius: 2px; }
 .example-picker button:hover { background: var(--soft); }
 .example-picker button[aria-pressed="true"] { border-color: #555; color: var(--ink); font-weight: 600; }
-.figure-note, .figure-links { font-size: 13px; color: var(--muted); text-align: center; }
-.figure-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 5px; }
-.figure-links a { display: inline; text-decoration: underline; }
 .abstract-copy { text-align: justify; }
 
 .method-figure { margin-block: 30px 26px; }
@@ -100,6 +97,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, pre:focus-visible { 
 .model-gallery img { width: 100%; background: #fff; }
 .model-gallery figcaption { text-align: center; margin-top: 12px; font-size: 14px; color: var(--muted); }
 .model-gallery figcaption strong { color: var(--ink); }
+.quantitative-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; margin-block: 26px 28px; }
+.quantitative-pair .zoomable { display: flex; align-items: center; justify-content: center; height: 330px; }
+.quantitative-pair img { width: auto; height: auto; max-width: 100%; max-height: 100%; }
+.t2i-results figcaption { margin-top: 14px; color: var(--muted); font-size: 14px; text-align: center; }
+.dpo-figure { margin-top: 26px; }
+.dpo-figure img { width: 100%; }
 .news-section { padding-bottom: 24px; }
 .news-list { padding-left: 21px; }
 .news-list li + li { margin-top: 10px; }
@@ -119,6 +122,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, pre:focus-visible { 
 dialog { width: min(1300px, 96vw); max-height: 94dvh; padding: 52px 20px 20px; border: 1px solid var(--line); border-radius: 6px; box-shadow: 0 20px 100px #0004; background: #fff; color: var(--ink); }
 dialog::backdrop { background: #000b; }
 dialog img { max-height: calc(90dvh - 120px); max-width: 100%; width: auto; margin: auto; object-fit: contain; }
+dialog img[src$=".svg"] { width: 100%; }
 dialog p { font-size: 13px; text-align: center; color: var(--muted); margin-top: 16px; }
 .dialog-close { position: absolute; top: 10px; right: 14px; display: flex; align-items: center; gap: 10px; border: 1px solid var(--line); background: #fff; color: var(--ink); border-radius: 4px; padding: 5px 12px; font-size: 12px; }
 .dialog-close span { font-size: 20px; line-height: 1; }
@@ -162,7 +166,6 @@ dialog p { font-size: 13px; text-align: center; color: var(--muted); margin-top:
   .example-picker { gap: 6px; margin-bottom: 10px; }
   .example-picker button { flex-basis: 70px; padding: 4px; font-size: 10px; }
   .example-picker button img { width: 58px; height: 58px; }
-  .figure-note, .figure-links { font-size: 12px; }
   .abstract-copy { text-align: left; }
   .method-figure { margin-block: 24px; }
   .method-figure figcaption { font-size: 12px; margin-top: 14px; }
@@ -171,6 +174,10 @@ dialog p { font-size: 13px; text-align: center; color: var(--muted); margin-top:
   .results-table caption { font-size: 12px; }
   .model-gallery { grid-template-columns: 1fr; gap: 24px; }
   .model-gallery figcaption { font-size: 13px; margin-top: 10px; }
+  .quantitative-pair { grid-template-columns: 1fr; gap: 26px; margin-block: 24px; }
+  .quantitative-pair .zoomable { height: auto; }
+  .quantitative-pair img { width: 100%; max-width: 360px; }
+  .t2i-results figcaption { font-size: 12px; }
   .news-section { padding-bottom: 20px; }
   .citation-section { padding-top: 24px; padding-bottom: 24px; }
   .citation-section pre { padding: 18px 16px; font-size: 11px; }

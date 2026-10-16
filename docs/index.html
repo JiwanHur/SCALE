@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="Guidance-free image generation results comparing SD1.5, GFT, and SCALE, with and without DPO.">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=3">
   <script src="script.js?v=2" defer></script>
 </head>
 <body>
@@ -38,7 +38,7 @@
           Code <span class="button-note">(coming soon)</span>
         </a>
       </div>
-      <p class="tldr"><strong>TL;DR:</strong> SCALE learns from the contrast between real and self-generated samples to improve visual generation with <strong>one model evaluation per sampling step.</strong></p>
+      <p class="tldr"><strong>TL;DR:</strong> SCALE learns from the contrast between real and self-generated samples to improve visual generation with one model evaluation per sampling step.</p>
     </header>
 
     <section class="showcase wrap" aria-labelledby="showcase-title">
@@ -78,8 +78,6 @@
         <button type="button" data-example="tower" aria-pressed="false"><img src="assets/images/tower-scale.webp" width="64" height="64" alt="" loading="lazy"><span>Tower</span></button>
         <button type="button" data-example="cottage" aria-pressed="false"><img src="assets/images/cottage-scale.webp" width="64" height="64" alt="" loading="lazy"><span>Cottage</span></button>
       </div>
-      <p class="figure-note">Nine examples from Figures 5 and 11, at 512 × 512. All methods use guidance-free sampling. Click an image to enlarge.</p>
-      <p class="figure-links"><a href="assets/images/comparison.webp" class="zoomable" data-caption="Figure 5. SD1.5, GFT, and SCALE, with and without DPO.">Full Figure 5</a><span aria-hidden="true">·</span><a href="assets/images/comparison-supp.webp" class="zoomable" data-caption="Figure 11. Seven additional prompts comparing SD1.5, GFT, and SCALE, with and without DPO.">Full Figure 11</a></p>
     </section>
 
     <section class="section wrap" id="abstract" aria-labelledby="abstract-title">
@@ -123,9 +121,24 @@
           <figure><a class="zoomable" href="assets/images/dit.webp" data-caption="DiT-XL/2 samples. Alpha decreases from left to right; beta decreases from top to bottom within each class grid."><img src="assets/images/dit.webp" width="2200" height="1554" loading="lazy" alt="DiT-XL/2 generations of dogs, cars, cockatoos, red pandas, frogs, and buses across alpha and beta settings."></a><figcaption><strong>DiT-XL/2</strong> · Diffusion model</figcaption></figure>
           <figure><a class="zoomable" href="assets/images/llamagen.webp" data-caption="LlamaGen-L samples. Alpha decreases from left to right; beta decreases from top to bottom within each class grid."><img src="assets/images/llamagen.webp" width="2200" height="1554" loading="lazy" alt="LlamaGen-L generations of koalas, parrots, pandas, burgers, volcanoes, and flamingos across alpha and beta settings."></a><figcaption><strong>LlamaGen-L</strong> · Autoregressive model</figcaption></figure>
         </div>
-        <div class="prose">
-          <h3>Complementary to Preference Fine-Tuning</h3>
-          <p>SCALE also improves text-to-image generation with Stable Diffusion v1.5 and benefits further from DiffusionDPO. Explore the “With DPO” comparison above, or see the <a href="assets/paper.pdf">paper</a> for the full metrics and human preference study.</p>
+        <div class="prose t2i-results" id="text-to-image-results">
+          <h3>Text-to-Image Generation</h3>
+          <p>On Stable Diffusion v1.5, SCALE improves the CLIPScore–FID trade-off and achieves a <strong>72.3% win rate against GFT</strong> in the human preference study.</p>
+          <div class="quantitative-pair">
+            <figure>
+              <a class="zoomable" href="assets/images/t2i-pareto.svg" data-caption="Figure 4(a). CLIPScore–FID trade-off on SD1.5. Higher CLIPScore and lower FID are better."><img src="assets/images/t2i-pareto.svg" width="269" height="230" loading="lazy" alt="CLIPScore versus FID for CFG, guidance distillation, GFT, and SCALE. SCALE achieves a better trade-off between text alignment and sample quality."></a>
+              <figcaption><strong>(a)</strong> CLIPScore–FID trade-off.</figcaption>
+            </figure>
+            <figure>
+              <a class="zoomable" href="assets/images/t2i-preference.svg" data-caption="Figure 4(b). SCALE versus GFT: 72.3% wins, 15.6% ties, and 12.1% losses in the human preference study; a 74.0% win rate under HPSv2.1."><img src="assets/images/t2i-preference.svg" width="223" height="241" loading="lazy" alt="SCALE versus GFT preference results: 72.3% wins, 15.6% ties, and 12.1% losses in the human study. HPSv2.1 gives SCALE a 74.0% win rate."></a>
+              <figcaption><strong>(b)</strong> Preference win rate against GFT.</figcaption>
+            </figure>
+          </div>
+          <p><strong>Complementary to preference fine-tuning.</strong> Applying DiffusionDPO to SCALE further improves PickScore, HPSv2.1, ImageReward, and Aesthetic scores, showing that self-contrastive learning and preference alignment provide complementary gains.</p>
+          <figure class="dpo-figure">
+            <a class="zoomable" href="assets/images/t2i-dpo.svg" data-caption="Figure 4(c). SD1.5, GFT, and SCALE before and after DiffusionDPO. SCALE+DPO achieves the highest scores on all four reported metrics."><img src="assets/images/t2i-dpo.svg" width="571" height="226" loading="lazy" alt="Bar charts compare SD1.5, GFT, and SCALE with and without DPO on PickScore, HPSv2.1, ImageReward, and Aesthetic scores. SCALE+DPO achieves the highest score in every chart."></a>
+            <figcaption><strong>(c)</strong> Compatibility with DiffusionDPO. Higher is better for all four metrics.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
