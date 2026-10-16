@@ -12,13 +12,12 @@ All research figures and reported results are taken from the accompanying SCALE 
 | `docs/assets/images/dit.webp` | `figure/visualize_supp_dit.pdf`. |
 | `docs/assets/images/llamagen.webp` | `figure/visualize_supp_llama.pdf`. |
 | `docs/assets/images/t2i-pareto.svg` | `figure/panel_a_pareto.pdf`, Figure 4(a): CLIPScore–FID trade-off. |
-| `docs/assets/images/t2i-preference.svg` | `figure/panel_c_winrate.pdf`, Figure 4(b): human preference and HPSv2.1 win rates against GFT. |
 | `docs/assets/images/t2i-dpo.svg` | `figure/panel_b_bars.pdf`, Figure 4(c): SD1.5, GFT, and SCALE with and without DPO. |
 | `docs/assets/paper.pdf` | Current manuscript, rebuilt with its Project page link set to `https://jiwanhur.github.io/SCALE/`. |
 
 Raster figures are rendered or extracted with Poppler and saved as WebP at quality 93. Image panels are not retouched. The gallery preserves the original alpha/beta grids and labels; smaller alpha/beta values correspond to stronger implicit guidance.
 
-The Figure 4 plots are converted directly from the original PDFs to self-contained SVG with `pdftocairo`, preserving the plotted values, axes, legends, and vector quality. Panels (a) and (b) sit side by side on desktop and stack on mobile; panel (c) spans the text column. The 72.3% human preference win rate is reported in Figure 4(b).
+The Figure 4 plots are converted directly from the original PDFs to self-contained SVG with `pdftocairo`, preserving the plotted values, axes, legends, and vector quality. The page shows panel (a) centered above panel (c), which spans the text column.
 
 Figure 11's PDF object order differs from its visual row order. With `pdfimages -j`, the zero-based image indices are: `green-hair` → 4, `painting` → 0, `squirrel` → 5, `raccoon` → 6, `shoes` → 2, `tower` → 1, and `cottage` → 3. The comparison picker follows the visual row order, after the two main-paper examples. Prompt text is transcribed from the figures, including the original spelling. Thumbnail previews use the SCALE column without DPO; the DPO switch changes all three full-size comparison panels together.
 

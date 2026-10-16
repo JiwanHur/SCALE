@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="Guidance-free image generation results comparing SD1.5, GFT, and SCALE, with and without DPO.">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
   <script src="script.js?v=2" defer></script>
 </head>
 <body>
@@ -123,17 +123,11 @@
         </div>
         <div class="prose t2i-results" id="text-to-image-results">
           <h3>Text-to-Image Generation</h3>
-          <p>On Stable Diffusion v1.5, SCALE improves the CLIPScore–FID trade-off and achieves a <strong>72.3% win rate against GFT</strong> in the human preference study.</p>
-          <div class="quantitative-pair">
-            <figure>
-              <a class="zoomable" href="assets/images/t2i-pareto.svg" data-caption="Figure 4(a). CLIPScore–FID trade-off on SD1.5. Higher CLIPScore and lower FID are better."><img src="assets/images/t2i-pareto.svg" width="269" height="230" loading="lazy" alt="CLIPScore versus FID for CFG, guidance distillation, GFT, and SCALE. SCALE achieves a better trade-off between text alignment and sample quality."></a>
-              <figcaption><strong>(a)</strong> CLIPScore–FID trade-off.</figcaption>
-            </figure>
-            <figure>
-              <a class="zoomable" href="assets/images/t2i-preference.svg" data-caption="Figure 4(b). SCALE versus GFT: 72.3% wins, 15.6% ties, and 12.1% losses in the human preference study; a 74.0% win rate under HPSv2.1."><img src="assets/images/t2i-preference.svg" width="223" height="241" loading="lazy" alt="SCALE versus GFT preference results: 72.3% wins, 15.6% ties, and 12.1% losses in the human study. HPSv2.1 gives SCALE a 74.0% win rate."></a>
-              <figcaption><strong>(b)</strong> Preference win rate against GFT.</figcaption>
-            </figure>
-          </div>
+          <p>On Stable Diffusion v1.5, SCALE improves the CLIPScore–FID trade-off between text alignment and sample quality.</p>
+          <figure class="pareto-figure">
+            <a class="zoomable" href="assets/images/t2i-pareto.svg" data-caption="Figure 4(a). CLIPScore–FID trade-off on SD1.5. Higher CLIPScore and lower FID are better."><img src="assets/images/t2i-pareto.svg" width="269" height="230" loading="lazy" alt="CLIPScore versus FID for CFG, guidance distillation, GFT, and SCALE. SCALE achieves a better trade-off between text alignment and sample quality."></a>
+            <figcaption><strong>(a)</strong> CLIPScore–FID trade-off.</figcaption>
+          </figure>
           <p><strong>Complementary to preference fine-tuning.</strong> Applying DiffusionDPO to SCALE further improves PickScore, HPSv2.1, ImageReward, and Aesthetic scores, showing that self-contrastive learning and preference alignment provide complementary gains.</p>
           <figure class="dpo-figure">
             <a class="zoomable" href="assets/images/t2i-dpo.svg" data-caption="Figure 4(c). SD1.5, GFT, and SCALE before and after DiffusionDPO. SCALE+DPO achieves the highest scores on all four reported metrics."><img src="assets/images/t2i-dpo.svg" width="571" height="226" loading="lazy" alt="Bar charts compare SD1.5, GFT, and SCALE with and without DPO on PickScore, HPSv2.1, ImageReward, and Aesthetic scores. SCALE+DPO achieves the highest score in every chart."></a>
